@@ -1,0 +1,82 @@
+/* Reset Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #214181; /* Biru Navy sesuai gambar login */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Membuat judul h2 jadi putih agar terbaca di background biru */
+h2 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Mengubah FORM menjadi kotak putih di tengah */
+form {
+    background: white;
+    padding: 40px;
+    border-radius: 25px; /* Pojok melengkung sesuai gambar login */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #214181; /* Warna teks label jadi biru navy */
+    font-weight: 500;
+}
+
+/* Mengatur inputan agar rapi dan lebar */
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    background-color: #E2E8F0; /* Abu-abu seperti gambar login */
+    border: none;
+    border-radius: 15px;
+    outline: none;
+    text-align: center; /* Teks di tengah */
+    font-size: 14px;
+    display: block;
+}
+
+input[type="text"]:focus {
+    background-color: #f1f5f9;
+    box-shadow: 0 0 0 2px #63b3ed;
+}
+
+/* Merapikan tombol Update */
+button[type="submit"] {
+    background-color: #214181;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #1a3469;
+    transform: scale(1.02);
+}
+
+/* Menghilangkan efek <br> yang bikin jarak berantakan */
+br {
+    display: none;
+}

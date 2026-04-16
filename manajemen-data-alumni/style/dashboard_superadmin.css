@@ -1,0 +1,432 @@
+/* --- CSS DASHBOARD ALUMNI LENGKAP --- */
+
+/* Import Font Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* RESET DASAR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background: #f4f6fb; /* Background abu-abu muda */
+    overflow-x: hidden;
+}
+
+/* --- SIDEBAR (KIRI) --- */
+.sidebar-aside {
+    width: 260px;
+    background: #ffffff;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    border-right: 1px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    z-index: 1000;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 35px;
+}
+
+.brand-logo {
+    background: #4f46e5;
+    color: white;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.brand-text .main-title {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    color: #4f46e5;
+    line-height: 1.2;
+}
+
+.brand-text .sub-title {
+    font-size: 11px;
+    color: #6b7280;
+    letter-spacing: 0.5px;
+}
+
+.side-nav {
+    flex-grow: 1;
+}
+
+.side-nav a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #6b7280;
+    font-size: 14px;
+    border-radius: 8px;
+    margin-bottom: 4px;
+    transition: 0.2s;
+}
+
+.side-nav a:hover, .side-nav a.active {
+    background: #f3f4f6;
+    color: #111827;
+}
+
+.sub-nav {
+    margin-left: 20px;
+    padding-left: 15px;
+    border-left: 2px solid #f3f4f6;
+    margin-bottom: 15px;
+}
+
+.sub-nav a {
+    padding: 8px 0;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+/* Style khusus untuk menu yang aktif (seperti Educational Info di gambar) */
+.sub-nav a.active-sub {
+    background: #4f46e5;
+    color: white !important;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+.logout-link {
+    margin-top: auto;
+    color: #6b7280 !important;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+}
+
+/* --- KONTEN UTAMA (KANAN) --- */
+.main-content {
+    margin-left: 260px; /* Geser agar tidak tertutup sidebar */
+    width: calc(100% - 260px);
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- HEADER ATAS --- */
+.main-header {
+    height: 70px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    z-index: 900;
+}
+
+.search-global {
+    background: #f9fafb;
+    padding: 8px 15px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    width: 320px;
+    display: flex;
+    align-items: center;
+    color: #9ca3af;
+}
+
+.search-global input {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 13px;
+    flex-grow: 1;
+    margin-left: 8px;
+}
+
+/* USER PROFILE AREA */
+.user-meta {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.theme-toggle {
+    width: 35px;
+    height: 35px;
+    background: #eef2ff;
+    color: #4f46e5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.user-identity {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.user-text {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.user-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #111827;
+    line-height: 1.2;
+}
+
+.user-role {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.avatar-box {
+    width: 42px;
+    height: 42px;
+    background-color: #4f46e5;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 6px;
+    text-transform: uppercase;
+}
+
+/* --- AREA JUDUL & TOMBOL --- */
+.content-header {
+    padding: 30px 40px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.breadcrumb .parent {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.breadcrumb h2 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #111827;
+}
+
+.header-btns {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-secondary {
+    background: white;
+    border: 1px solid #e5e7eb;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-primary {
+    background: #4f46e5;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* --- TABEL DATA --- */
+.data-card {
+    background: white;
+    margin: 0 40px 20px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    overflow: hidden;
+}
+
+.table-tools {
+    padding: 15px 20px;
+    display: flex;
+    justify-content: flex-end; /* Sesuai gambar: search tabel di kanan */
+    gap: 15px;
+    background: #fff;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.search-table {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #e5e7eb;
+    padding: 5px 12px;
+    border-radius: 6px;
+    width: 250px;
+}
+
+.search-table input {
+    border: none;
+    outline: none;
+    font-size: 12px;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: #f9fafb;
+    padding: 12px 20px;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 500;
+    color: #6b7280;
+    border-bottom: 1px solid #f3f4f6;
+    text-transform: capitalize;
+}
+
+td {
+    padding: 15px 20px;
+    font-size: 13px;
+    color: #374151;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+tr:hover {
+    background: #f9fafb;
+}
+
+.text-bold {
+    font-weight: 600;
+    color: #111827;
+}
+
+/* Status & Action Icons */
+.status-badge {
+    color: #4f46e5;
+    background: #eef2ff;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.actions-cell a {
+    text-decoration: none;
+    margin: 0 5px;
+    font-size: 16px;
+}
+
+.btn-view { color: #10b981; }
+.btn-edit { color: #3b82f6; }
+.btn-delete { color: #ef4444; }
+
+/* --- FOOTER & PAGINATION --- */
+.table-footer {
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #f3f4f6;
+}
+
+.pagination-controls {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.rows-per-page {
+    font-size: 13px;
+    color: #374151;
+}
+
+.page-numbers {
+    display: flex;
+    gap: 5px;
+}
+
+.page-numbers button {
+    min-width: 32px;
+    height: 32px;
+    border: 1px solid #e5e7eb;
+    background: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-numbers button.active {
+    background: #4f46e5;
+    color: white;
+    border-color: #4f46e5;
+}
+
+.footer {
+    text-align: center;
+    padding: 30px;
+    color: #9ca3af;
+    font-size: 12px;
+}
+/* Pastikan sidebar menggunakan flexbox agar logout bisa didorong ke bawah */
+.sidebar-aside {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: fixed;
+}
+
+.side-nav {
+    flex-grow: 1; /* Mengambil sisa ruang agar logout terdorong ke bawah */
+}
+
+.logout-link {
+    margin-top: auto; /* Kunci agar tombol berada di dasar sidebar */
+    padding: 15px;
+    color: #ef4444; /* Warna merah */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-top: 1px solid #f3f4f6;
+}
